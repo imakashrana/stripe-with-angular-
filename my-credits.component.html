@@ -1,0 +1,92 @@
+<section class="notifications-backimage">
+  <div class="container">
+    <div class="notifications-heading">
+      <h2 class="text-center text-white">MY CREDITS</h2>
+      <h4>Get Credits and Book Sessions with Industry Executives of Your Choice</h4>
+    </div>
+  </div>
+</section>
+
+<section class="notifications-blocks">
+  <div class="container">
+    <div class="row top-persons mt-5">
+      <div class="col-lg-6 d-flex align-items-center flex-column">
+        <img src="assets/images/shield.png" alt="" class="img-fluid shield-image">
+        <h4 class="shield-text2">100% BOOKING GUARANTEE</h4>
+        <p class="shield-text mt-3">If you book a session and are unable to speak with an industry executive, your
+          unused credits for the session will be returned to your account.</p>
+      </div>
+      <div class="col-lg-6">
+        <div class="my-connects">
+          <form [formGroup]='creditForm' (ngSubmit)="onSubmit()">
+            <div class="satisfaction-image">
+            </div>
+            <h3 class="text-center">MY CREDITS</h3>
+            <div class="mt-4 mb-3">
+            </div>
+            <div class="plans-details">
+              <h5 class="mb-1"><b>You currently have {{currentCredits}} credits.</b></h5>
+              <h5 class="mb-3">Select the amount to buy</h5>
+              <mat-form-field appearance="fill" floatlabel="never" class="w-100">
+                <mat-label>Select</mat-label>
+                <mat-select #credit formControlName="plan" (selectionChange)="onselectCreditPlan(credit.value)">
+                  <mat-option *ngFor="let item of credits" [value]="item.value">
+                    {{item.name}}
+                  </mat-option>
+                </mat-select>
+                <mat-error>Select a plan</mat-error>
+              </mat-form-field>
+            </div>
+            <div class="plans-details-margin mb-4" *ngIf="selectedPlan">
+              Payment Amount is ${{selectedPlan}}
+            </div>
+            <div class="megastar-text">
+              <h4>Ready to instantly save money on your sessions? Start
+                saving today by becoming a <a routerLink="/pricing">Megastar Member</a></h4>
+            </div>
+            <button type="submit" class="btn submit-btn mt-5 mx-auto d-block">Get Credits
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="modal fade" id="paymentPopup" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+  aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">Make Payment</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <form [formGroup]="StripeForm" (ngSubmit)="makePayment()">
+        <div class="modal-body">
+          <div>
+            <mat-label>Card Holder Name</mat-label>
+            <mat-form-field floatLabel='never' appearance="fill" class="w-100">
+              <input matInput formControlName="name">
+              <mat-error>Name is required</mat-error>
+            </mat-form-field>
+          </div>
+          <div class="user-name">
+            <ngx-stripe-card [options]="cardOptions" [elementsOptions]="elementsOptions"></ngx-stripe-card>
+          </div>
+
+        </div>
+        <div class="modal-footer footer-modal-edit">
+          <div class="secure-image">
+            <img src="assets/images/secure.jpg" alt="" class="img-fluid">
+          </div>
+          <div>
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <button type="submit" class="btn theme_btn example-2">Pay ${{selectedPlan}}</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

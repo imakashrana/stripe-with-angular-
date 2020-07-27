@@ -1,0 +1,193 @@
+.notifications-backimage{
+    background: #461e6d;
+    background: linear-gradient(120deg, #461e6d 0%, #46456f 70%, #765266 100%); background-size: cover; height: 50vh;background-repeat: no-repeat;
+    display:flex;align-items: center;
+}
+
+.notifications-text {
+    padding: 10px 20px;
+    box-shadow: 0px 2px 6px #b1b1b1;
+    border-radius: 8px;
+    background: white;
+}
+.notification-date svg {
+    width: 17px;
+    margin-right: 7px;
+}
+.notif-text-edit {
+    font-size: 18px;
+}
+.view_more_btn{
+    margin: 8px;
+    border: 2px solid #5ed4be;
+    border-radius: 0px;
+    color: #5ed4be;
+    font-size: 18px !important;
+}
+section.notifications-blocks {
+    padding-bottom: 50px;
+}
+.notification-date img {
+    width: 4%;
+}
+.categories {
+    background: white;
+    box-shadow: 0px 0px 10px #d6d6d6;
+    margin: 0 30px;
+}
+.categories h4 {
+    font-size: 19px;
+    font-weight: 600;
+    padding: 20px 20px 0 20px;
+}
+.categories p {
+    font-size: 16px;
+    border: 1px solid #00aaf0;
+    padding: 7px 20px;
+    color: #00aaf0;
+}
+.category-active {
+    background: #00aaf0;
+    color: white !important;
+}
+.edit-category {
+    padding: 20px;
+    text-align: right;
+}
+.edit-category svg{
+    fill: #ec5551;
+}
+
+.top-persons h6 {
+    font-size: 20px;
+}
+
+.v-nav-link-edit{
+    font-size: 19px;
+    font-weight: 600;
+    padding: 10px 20px;
+    color: black;
+}
+
+.nav-pills .v-nav-link-edit.active, .nav-pills .show>.v-nav-link-edit {
+    color: #00aaf0;
+    background-color: white;
+    transition: all 0.3s;
+}
+
+.top-persons {
+    background: white;
+    box-shadow: 0px 0px 10px #d6d6d6;
+    padding: 30px;
+}
+
+.plans-details h6 {
+    font-size: 18px !important;
+    font-weight: 400;
+}
+
+.submit-btn{
+    background-color: #5ed4be;
+    color: #fff;
+    border: none;
+    width: 54%;
+    font-weight: bold;
+    padding: 12px 0 !important;
+    border-radius: 4px;
+    font-size: 20px;
+}
+
+.form-icon-edit svg {
+    width: 21px;
+    fill: #2acbae;
+}
+
+.satisfaction-image img {
+    width: 28%;
+    position: absolute;
+    right: -3%;
+    top: -4%;
+}
+
+.megastar-text h4 {
+    color: #8e8e8e;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.megastar-text h4 a {
+    color: #1651a7;
+    text-decoration: underline;
+}
+
+.top-persons img {
+    border-radius: 10px;
+}
+
+.notifications-heading h4 {
+    text-align: center;
+    color: white;
+    font-size: 23px;
+    font-weight: 600;
+    margin-top: 15px !important;
+}
+
+.secure-image img {
+    width: 100%;
+}
+
+.secure-image {
+    width: 25%;
+}
+
+.footer-modal-edit{
+    display: flex !important;
+    justify-content: space-between !important;
+}
+
+.shield-image {
+    width: 30%;
+}
+
+p.shield-text span {
+    font-size: 17px;
+    font-weight: 600;
+}
+
+.plans-details {
+    margin-top: 7%;
+}
+
+.plans-details-margin {
+    margin-top: 2%;
+}
+
+.shield-text2 {
+    margin-top: 30px;
+    font-weight: 700 !important;
+}
+
+
+@media (max-width: 767px){
+    .shield-image {
+        width: 50% !important;
+    }
+    .submit-btn{
+        margin-top: 30px !important;
+    }
+    .top-persons {
+        padding: 30px 0px !important;
+    }
+    .notifications-backimage {
+        height: 45vh !important;
+    }
+}
+
+@media (max-width: 350px) and (min-width: 320px){
+    .notifications-backimage {
+        height: 50vh !important;
+    }
+    .top-persons h3 {
+        font-size: 22px !important;
+    }
+}
